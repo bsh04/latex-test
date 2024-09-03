@@ -1,0 +1,79 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "metadata": {
+    "kernelspec": {
+      "name": "ijulia-1.9",
+      "display_name": "IJulia 1.9.3",
+      "language": "julia"
+    },
+    "language_info": {
+      "name": "julia",
+      "file_extension": ".jl",
+      "version": "1.9.3"
+    },
+    "engee": {}
+  },
+  "cells": [
+    {
+      "id": "99c96055",
+      "cell_type": "markdown",
+      "source": [
+        "# Introduction to LaTeX\n\nIn this tutorial, you will learn some of the basics on how to use $\\LaTeX$ to display equations in Jupyter notebooks. For looking up symbols you may need, you can use any of the many [cheat sheets](http://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf) you can find by asking Google. I have provided a few that will come up often in this course at the [end of this lesson](#Useful-LaTeX-symbols-for-BE/Bi-103).\n\nIn this lesson, whenever a LaTeX expression is shown, the raw Markdown/LaTeX is shown beneath it. (The word LaTeX is generally stylized as $\\LaTeX$, but I get tired of reading that, so going forward, I will just write \"LaTeX.\")"
+      ],
+      "attachments": {},
+      "metadata": {
+        "id": "3714a098",
+        "name": "Название секции",
+        "engee": {
+          "isDisplay": true,
+          "isParagraph": true,
+          "isClosedParagraph": false,
+          "amountHideCellsInside": 0,
+          "codeOutputView": "col",
+          "codeOutputHidden": false
+        }
+      }
+    },
+    {
+      "id": "5def12d3",
+      "cell_type": "markdown",
+      "source": [
+        "## Basic inline LaTeX\n\nTo embed LaTeX within text, simply encapsulate the LaTeX portions in dollar signs (`$`). MathJax takes care of the rest. As an example, consider the sentence below and the markdown/LaTeX code to render it.\n\nEinstein told us that $E = mc^2$.\n\n    Einstein told us that $E = mc^2$.\n\nNotice how the equation is properly rendered, with mathematical variables in italics. Note also how `^2` was used to raise to a power. If the power has more than one character in it, it should be enclosed in braces (`{}`).  In fact, braces are used to generally group symbols in LaTeX.\n\nEuler told us that $\\mathrm{e}^{i \\pi} - 1 = 0$.\n\n    Euler told us that $\\mathrm{e}^{i \\pi} - 1 = 0$.\n\nAside from the grouping braces, there are several other syntactical items of note. First, notice that I made the special character $\\pi$ with `\\pi`. In general, a backward slash precedes special symbols or commands in LaTeX. If we want another Greek letter, like $\\theta$, we use `\\theta`. Now, also note that I used \"`\\mathrm{e}`\" for the base of the natural logarithm.  I was signaling to LaTeX that I wanted the character written in Roman font, and not italics, so I used `\\mathrm`. Anything in the braces following the function `\\mathrm` is rendered in Roman font. Note the difference.\n\nThis is $e$. This is $\\mathrm{e}$\n\n    This is $e$. This is $\\mathrm{e}$.\n\nNow, back to grouping things in braces. We can do similar groupings using braces with with subscripts.\n\nThe dot product of two $n$-vectors is $\\mathbf{a} \\cdot \\mathbf{b} = \\sum_{i=1}^n a_i b_i$.\n\n    The dot product of two $n$-vectors is $\\mathbf{a} \\cdot \\mathbf{b} = \\sum_{i=1}^n a_i b_i$.\n\nHere, I have used `$\\mathbf{a}$` to make the character `a` boldface, denoting a vector. Note that we denote subscripts with an underscore. Notice also that the bounds of the sum use the same underscore and caret notation as for subscripts and superscripts.  "
+      ],
+      "attachments": {},
+      "metadata": {
+        "id": "c9248c1f",
+        "name": "Название секции",
+        "engee": {
+          "isDisplay": true,
+          "isParagraph": false,
+          "isClosedParagraph": false,
+          "amountHideCellsInside": 0,
+          "codeOutputView": "col",
+          "codeOutputHidden": false
+        }
+      }
+    },
+    {
+      "id": "d8ed3060",
+      "cell_type": "markdown",
+      "source": [
+        "## Useful LaTeX symbols for BE/Bi 103\nFollowing is a list of some symbols you may find useful in this class.\n\nLaTeX | symbol\n--- | :---: \n`\\approx` | $\\approx$ \n`\\sim` | $\\sim$ \n`\\propto` | $\\propto$\n`\\le` | $\\le$\n`ge` | $\\ge$\n`\\pm` | $\\pm$\n`\\in` | $\\in$\n`\\ln` | $\\ln$\n`\\exp` | $\\exp$\n`\\prod_{i\\in D}` | ${\\displaystyle \\prod_{i\\in D}}$\n`\\sum_{i\\in D}` | ${\\displaystyle \\sum_{i\\in D}}$\n`\\frac{\\partial f}{\\partial x}` | ${\\displaystyle \\frac{\\partial f}{\\partial x}}$\n`\\sqrt{x}` | $\\sqrt{x}$\n`\\bar{x}` | $\\bar{x}$\n`\\langle x \\rangle` | $\\langle x \\rangle$\n`\\left\\langle \\frac{x}{y} \\right\\rangle` | $\\left\\langle \\frac{x}{y} \\right\\rangle$"
+      ],
+      "attachments": {},
+      "metadata": {
+        "id": "439b9a5a",
+        "name": "Название секции",
+        "engee": {
+          "isDisplay": true,
+          "isParagraph": false,
+          "isClosedParagraph": false,
+          "amountHideCellsInside": 0,
+          "codeOutputView": "col",
+          "codeOutputHidden": false
+        }
+      }
+    }
+  ]
+}
